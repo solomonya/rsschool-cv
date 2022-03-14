@@ -30,6 +30,7 @@ At the moment I am a student at a technical university in Almaty. In addition to
 6. React
 
 ---
+
 ### Code example
 
 #### Codewars task
@@ -37,26 +38,27 @@ At the moment I am a student at a technical university in Almaty. In addition to
 You are going to be given a word. Your job is to return the middle character of the word. If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
 
 #### Solution
+
 <code><pre>function maxTriSum(numbers) {
-  const sortNums = numbers.sort((a, b) => {
-    return a - b;
-  });
-  const sortNumsWithoutDuplicates = [];
-  for (let i = 0; i < sortNums.length; i++) {
-    if (sortNums[i] === sortNums[i + 1]) {
-      i++;
-    }
-    sortNumsWithoutDuplicates.push(sortNums[i]);
-  }
-  let sum = 0;
-  for (
-    let i = sortNumsWithoutDuplicates.length - 1;
-    i >= sortNumsWithoutDuplicates.length - 3;
-    i--
-  ) {
-    sum += sortNumsWithoutDuplicates[i];
-  }
-  return sum;
+const sortNums = numbers.sort((a, b) => {
+return a - b;
+});
+const sortNumsWithoutDuplicates = [];
+for (let i = 0; i < sortNums.length; i++) {
+if (sortNums[i] === sortNums[i + 1]) {
+i++;
+}
+sortNumsWithoutDuplicates.push(sortNums[i]);
+}
+let sum = 0;
+for (
+let i = sortNumsWithoutDuplicates.length - 1;
+i >= sortNumsWithoutDuplicates.length - 3;
+i--
+) {
+sum += sortNumsWithoutDuplicates[i];
+}
+return sum;
 }</pre></code>
 
 ---
