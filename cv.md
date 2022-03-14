@@ -37,7 +37,7 @@ At the moment I am a student at a technical university in Almaty. In addition to
 You are going to be given a word. Your job is to return the middle character of the word. If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
 
 #### Solution
-`function maxTriSum(numbers) {
+<code><pre>function maxTriSum(numbers) {
   const sortNums = numbers.sort((a, b) => {
     return a - b;
   });
@@ -57,7 +57,7 @@ You are going to be given a word. Your job is to return the middle character of 
     sum += sortNumsWithoutDuplicates[i];
   }
   return sum;
-}`
+}</pre></code>
 
 ---
 
