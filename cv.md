@@ -6,7 +6,7 @@
 
 ---
 
-### Contact information:
+### Contact information
 
 - [Linkedin](https://www.linkedin.com/in/solomon-khan-337620234/)
 - Telegram: @solomonya
@@ -39,27 +39,29 @@ You are going to be given a word. Your job is to return the middle character of 
 
 #### Solution
 
-<code><pre>function maxTriSum(numbers) {
-const sortNums = numbers.sort((a, b) => {
-return a - b;
-});
-const sortNumsWithoutDuplicates = [];
-for (let i = 0; i < sortNums.length; i++) {
-if (sortNums[i] === sortNums[i + 1]) {
-i++;
+```javascript
+function maxTriSum(numbers) {
+  const sortNums = numbers.sort((a, b) => {
+    return a - b;
+  });
+  const sortNumsWithoutDuplicates = [];
+  for (let i = 0; i < sortNums.length; i++) {
+    if (sortNums[i] === sortNums[i + 1]) {
+      i++;
+    }
+    sortNumsWithoutDuplicates.push(sortNums[i]);
+  }
+  let sum = 0;
+  for (
+    let i = sortNumsWithoutDuplicates.length - 1;
+    i >= sortNumsWithoutDuplicates.length - 3;
+    i--
+  ) {
+    sum += sortNumsWithoutDuplicates[i];
+  }
+  return sum;
 }
-sortNumsWithoutDuplicates.push(sortNums[i]);
-}
-let sum = 0;
-for (
-let i = sortNumsWithoutDuplicates.length - 1;
-i >= sortNumsWithoutDuplicates.length - 3;
-i--
-) {
-sum += sortNumsWithoutDuplicates[i];
-}
-return sum;
-}</pre></code>
+```
 
 ---
 
