@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RS - school CV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container">
+          <nav class="navigation">
+            <ul class="nav-list">
+              <li class="nav-list__item">
+                <a href="#contacts" class="nav-list__link">Contacts</a>
+              </li>
+              <li class="nav-list__item">
+                <a href="#about" class="nav-list__link">About myself</a>
+              </li>
+              <li class="nav-list__item">
+                <a href="#skills" class="nav-list__link">Skills</a>
+              </li>
+              <li class="nav-list__item">
+                <a href="#code" class="nav-list__link">Code example</a>
+              </li>
+              <li class="nav-list__item">
+                <a href="#projects" class="nav-list__link">Projects</a>
+              </li>
+              <li class="nav-list__item">
+                <a href="#education" class="nav-list__link">Education</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main class="main">
+        <div class="container main-container">
+          <section class="hero content-block">
+            <div class="titles">
+              <h1 class="title">Solomon Khan</h1>
+              <h2 class="title title_less">
+                Junior/Trainee Frontend Developer
+              </h2>
+              <h3 class="title title_less">Kazakstan, Almaty</h3>
+            </div>
+            <img
+              class="hero__img"
+              src="./assets/meido.jpg"
+              alt="anime tyan image"
+            />
+          </section>
+          <div class="info-container">
+            <section class="contacts content-block" id="contacts">
+              <h2 class="title">Contacts</h2>
+              <ul class="list">
+                <li class="list__item">
+                  <a class="list__link" href="mailto:hansolomon168@gmail.com"
+                    >email: hansolomon168@gmail.com</a
+                  >
+                </li>
+                <li class="list__item">
+                  <a
+                    target="_blank"
+                    href="https://t.me/solomonya"
+                    class="list__link"
+                    >telegram: @solomonya</a
+                  >
+                </li>
+                <li class="list__item">
+                  <span class="list__text"
+                    >discord: Khan Solomon(@solomonya)</span
+                  >
+                </li>
+              </ul>
+            </section>
+            <section id="skills" class="content-block skills">
+              <h2 class="title">Skills</h2>
+              <ul class="list">
+                <li class="list__item">
+                  <span class="list__text">HTML/CSS</span>
+                </li>
+                <li class="list__item">
+                  <span class="list__text">JavaScript</span>
+                </li>
+                <li class="list__item">
+                  <span class="list__text">GIT/Github</span>
+                </li>
+                <li class="list__item">
+                  <span class="list__text">SASS/SCSS</span>
+                </li>
+              </ul>
+            </section>
+            <section id="about" class="about content-block">
+              <h2 class="title">About myself</h2>
+              <p class="about__content">
+                Hi :) My name is Solomon, I'm from Almaty, I graduated the
+                second year in Computing Technique and Software at the
+                University of Energy and Communication. Since the university
+                curriculum about everything and nothing at the same time
+                studying programming myself, I stopped at the Web, specifically
+                on the frontend. This is the second stage0 for me, before that I
+                hardly passed stage1, missing a lot of tasks. I liked the
+                frontend and javascript in particular, I plan to study them
+                further and go deeper. I like to read and take walks with
+                friends when I'm not studying.
+              </p>
+            </section>
+          </div>
+          <section class="code content-block" id="code">
+            <h2 class="title">Code Example</h2>
+            <div class="code-content">
+              <div class="task-question">
+                <h3 class="title_less">Codewars Kata</h3>
+                <p class="task-question__task">
+                  In this kata you're expected to sort an array of 32-bit
+                  integers in ascending order of the number of on bits they
+                  have.In cases where two numbers have the same number of bits,
+                  compare their real values instead. E.g between 10 (...1010)
+                  and 12 (...1100), they both have the same number of on bits
+                  '2' but the integer 10 is less than 12 so it comes first in
+                  sorted order. Your task is to write the function
+                  <code>sortBybit()</code>
+                  that takes an array of integers and sort them as described
+                  above. Note: Your function should modify the input rather than
+                  creating a new array.
+                </p>
+              </div>
+              <div class="code-block">
+                <pre>
+              <code class="code-example">
+  const amountOfBits = (num) => {
+    const binaryString = Number(num).toString(2);
+    let bits = 0;
+    for (const ch of binaryString) {
+      if (ch === '1') {
+        bits++;
+      }
+    }
+    return bits;
+  };
+
+  const sortByBit = (numbers) => {
+    return numbers.sort((a, b) => {
+      return amountOfBits(a) - amountOfBits(b) || a - b;
+    });
+  };
+              </code>
+            </pre>
+              </div>
+            </div>
+          </section>
+          <div class="flex-2-container">
+            <section class="projects content-block" id="projects">
+              <h2 class="title">Links to projects</h2>
+              <ul class="list">
+                <li class="list__item">
+                  <a
+                    href="https://github.com/rolling-scopes-school/solomonya-JSFE2022Q1/tree/shelter-part-2"
+                    class="list__link"
+                    >landing page for shelter</a
+                  >
+                </li>
+                <li class="list__item">
+                  <a
+                    href="https://github.com/rolling-scopes-school/solomonya-JSFE2022Q1/tree/cssMemSlider"
+                    class="list__link"
+                    >pure css slider</a
+                  >
+                </li>
+                <li class="list__item">
+                  <a
+                    href="https://github.com/rolling-scopes-school/solomonya-JSFE2022Q1/tree/virtual-keyboard"
+                    class="list__link"
+                    >unfinished task with the virtual keyboard</a
+                  >
+                </li>
+              </ul>
+            </section>
+            <section id="education" class="content-block education">
+              <h2 class="title">Education</h2>
+              <ul class="list">
+                <li class="list__item">
+                  <span class="list__text">
+                    Almaty University of Powerengineering and Telecomunications
+                    2020 - 2024
+                  </span>
+                </li>
+                <li class="list__item">
+                  <span class="list__text">
+                    RS School Frontend 2022Q1&Stage1
+                  </span>
+                </li>
+                <li class="list__item">
+                  <span class="list__text">
+                    RS School Frontend 2021Q3&Stage0
+                  </span>
+                </li>
+              </ul>
+              <h2 class="title">Languages</h2>
+              <ul class="list">
+                <li class="list__item">
+                  <span class="list__text">Russian: Native</span>
+                </li>
+                <li class="list__item">
+                  <span class="list__text">English: Elementary A2</span>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="container footer-container">
+          <ul class="nav-list">
+            <li class="nav-list__item">
+              <a
+                class="nav-list__link"
+                href="https://github.com/solomonya"
+                target="_blank"
+                >github</a
+              >
+            </li>
+            <li class="nav-list__item">
+              <span class="nav-list__link">2022</span>
+            </li>
+            <li class="nav-list__item">
+              <a
+                class="nav-list__link nav-list__link_logo"
+                href="https://rs.school/js/"
+                target="_blank"
+              >
+                <span class="logo-icon"></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
